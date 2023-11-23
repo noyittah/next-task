@@ -1,0 +1,26 @@
+{
+  "name": "next-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/next-insurance/next-test.git"
+  },
+  "keywords": [
+    "next"
+  ],
+  "author": "Nitsan Zohar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/next-insurance/next-test/issues"
+  },
+  "homepage": "https://github.com/next-insurance/next-test#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
+}
