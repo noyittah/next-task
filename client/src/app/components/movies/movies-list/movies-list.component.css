@@ -1,0 +1,140 @@
+@import '/Users/noyittah/Desktop/dev/next-task/client/src/styles.css';
+
+.container{
+    background-color: #00D7FF;
+    display: flex;
+    flex-direction: column;
+
+    .container-title{
+        text-transform: uppercase;
+        font: normal normal bold 50px/56px Arial;
+        text-align: center;
+        padding-top: 20px;
+
+        @media only screen and (max-width: 375px) {
+            font: normal normal bold 20px/26px Arial;
+
+        }
+    }
+
+    .movies-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap:20px;
+        padding: 50px;
+
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            mat-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 200px;
+                height: 400px;
+                background-color: #00D7FF;
+                align-items: left;
+                border: none;
+
+                .movie-img{
+                    width: 100%;
+                    min-height: 280px;
+                }
+                    
+                mat-card-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    padding-top: 8px;
+        
+                    .title {
+                        font-size: 16px;
+                        max-height: 40px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+        
+                    .rating {
+                        font-size: 14px;
+                        img {
+                            width: 12px;
+                            height: 12px;
+                        }
+                    } 
+                }
+        
+                .read-btn {
+                    font-size: 14px;
+                    font-weight: normal;
+                    margin-bottom: 8px;
+                    margin-top: 8px;
+                    border: 1px solid black;
+                    height: 25px;
+                    width: 90%;
+                    border-radius: 30px;
+                    justify-content: left;
+                    align-self: center;
+
+                    .btn-txt {
+                        flex: 1; 
+                    }
+                    img {
+                        width: 15px;
+                        margin-left: 55px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 375px) {
+            padding: 20px;
+
+            .card {
+                width: calc(50% - 10px);
+                    mat-card {
+                        width: 144px;
+                        height: 350px;
+                        
+                        .movie-img{
+                            height: 214px;
+                            width: 144px;
+                        }
+
+                        mat-card-content {
+                            .title {
+                                max-height: 20px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis; 
+                            }
+                        }
+
+                        .read-btn {
+
+                            img {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+            }
+        }
+
+        /* Responsive for Web1920 */
+        @media only screen and (min-width: 1601px) {
+
+            .card {
+                width: calc(16.66667% - 20px);
+            }
+        }
+    }
+}
+
+.no-results {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+}

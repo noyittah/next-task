@@ -1,0 +1,26 @@
+<app-search (searchInputChanged)="onSearchInputChanged($event)"/>
+
+<div *ngIf="filteredMovies.length" class="container">
+    <div class="container-title">Explore your next<br> Movies and tv shows</div>
+    <div  class="movies-container">
+        <div *ngFor="let movie of filteredMovies" class="card">
+            <mat-card appearance="outlined">
+                <img class="movie-img" mat-card-image [src]="movie.image" alt="Movie Image">
+                <mat-card-content>
+                    <span class="title">{{ movie.title }} ({{movie.year}})</span>
+                    <span *ngIf="movie.rating != 0" class="rating">
+                        <img src="assets/imgs/star.png" alt="Icon">
+                        Rating: {{ movie.rating }}
+                    </span>          
+                </mat-card-content>
+                <button mat-button class="read-btn" (click)="openMovieDetails(movie.id)">
+                    <span class="btn-txt">Read more </span> 
+                    <img src="assets/imgs/arrow.png" alt="Icon">
+                </button> 
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!filteredMovies.length" class="no-results"> Sorry, no movies found for the current search. </div>
+
