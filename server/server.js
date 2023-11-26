@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const movies = require('./movies.json');
+const cors = require('cors');
+app.use(cors());
 
 const app = express();
 app.use(logger('dev'));

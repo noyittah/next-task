@@ -1,0 +1,16 @@
+<div class="modal-container">
+    <img class="movie-img" src="{{ movieDetails?.image }}" alt="Icon">
+    <div class="modal-content">
+        <span class="title">{{ movieDetails?.title }}</span>
+        <span class="time">{{ movieDetails?.time }}</span>
+        <span class="rating"> 
+            <img src="assets/imgs/star.png" alt="Icon">
+            {{ movieDetails?.rating }} /10 
+        </span>
+        <span class="summary" [innerHTML]="movieDetails?.summary"></span>
+        <button mat-button class="back-btn" (click)="closeModal()"> 
+            <img src="assets/imgs/backarrow.png" alt="Icon">
+            <span class="btn-txt"> Back to list </span> 
+        </button> 
+    </div>
+</div>

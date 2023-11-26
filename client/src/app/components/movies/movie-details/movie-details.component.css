@@ -1,0 +1,123 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.modal-container {
+    display: flex;
+    padding: 50px 135px;
+    justify-content: space-around;
+    gap:143px;
+
+    .movie-img {
+        width: 398px;
+        height: 591px;
+    }
+
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        flex-grow: 1;
+
+        .title {
+            font: normal normal bold 45px/45px Arial;
+            padding-bottom: 10px;
+        }
+
+        .time {
+            font: normal normal normal 25px/31px Arial;
+            padding-bottom: 24px;
+        }
+
+        .rating {
+            font: normal normal normal 20px/21px Arial;
+            padding-bottom: 28px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .summary {
+            font: normal normal normal 25px/35px Georgia;
+        }
+       
+        .back-btn {
+            font-size: 14px;
+            font-weight: normal;
+            border: 1px solid black;
+            background-color: white;
+            height: 30px;
+            width: 50%;
+            border-radius: 30px;
+            justify-content: left;
+            cursor: pointer;
+            align-self: flex-end;
+            margin-top: auto;
+            margin-right: auto;
+    
+            .btn-txt {
+                flex: 1; 
+            }
+
+            img {
+                width: 15px;
+                margin-right: 75px;
+            }
+        }
+    }
+
+    /* Responsive for iPhoneX */
+    @media only screen and (max-width: 375px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 35px;
+        gap: 10px;
+
+        .modal-content {
+
+           .title {
+            font: normal normal bold 25px/25px Arial;
+            padding-bottom: 5px;
+            } 
+
+            .time {
+                font: normal normal normal 15px/25px Arial;
+                padding-bottom: 7px;
+            }
+
+            .rating {
+                font: normal normal normal 15px/15px Arial;
+                padding-bottom: 7px;
+    
+                img {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            .summary {
+                font: normal normal normal 15px/25px Georgia;
+            }
+
+            .back-btn {
+                
+                img {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .movie-img {
+            width: 256px;
+            height: 380px;
+        }
+    }
+}

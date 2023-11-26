@@ -1,0 +1,8 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.movies-list{
+    flex: 1;
+}
