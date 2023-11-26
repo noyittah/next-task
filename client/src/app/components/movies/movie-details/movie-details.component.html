@@ -3,7 +3,7 @@
     <div class="modal-content">
         <span class="title">{{ movieDetails?.title }}</span>
         <span class="time">{{ movieDetails?.time }}</span>
-        <span class="rating"> 
+        <span *ngIf="movieDetails?.rating != 0" class="rating"> 
             <img src="assets/imgs/star.png" alt="Icon">
             {{ movieDetails?.rating }} /10 
         </span>

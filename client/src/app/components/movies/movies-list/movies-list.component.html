@@ -8,7 +8,7 @@
                 <img class="movie-img" mat-card-image [src]="movie.image" alt="Movie Image">
                 <mat-card-content>
                     <span class="title">{{ movie.title }} ({{movie.year}})</span>
-                    <span class="rating">
+                    <span *ngIf="movie.rating != 0" class="rating">
                         <img src="assets/imgs/star.png" alt="Icon">
                         Rating: {{ movie.rating }}
                     </span>          

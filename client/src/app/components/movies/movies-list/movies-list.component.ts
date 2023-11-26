@@ -44,9 +44,9 @@ export class MoviesListComponent implements OnInit{
     if (this.searchInput) {
       this.filteredMovies = this.movies.filter(movie =>
         movie.title.toLowerCase().includes(this.searchInput.toLowerCase())
-      ).slice(0,12);
+      );
     } else {
-      this.filteredMovies = this.filteredMovies.slice(0,12);
+      this.filteredMovies = this.filteredMovies;
     }
   }
 

@@ -41,6 +41,7 @@
 
                 .movie-img{
                     width: 100%;
+                    min-height: 280px;
                 }
                     
                 mat-card-content {
@@ -51,6 +52,10 @@
         
                     .title {
                         font-size: 16px;
+                        max-height: 40px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
                     }
         
                     .rating {
@@ -91,16 +96,30 @@
             .card {
                 width: calc(50% - 10px);
                     mat-card {
-                    width: 200px;
-                    height: 350px;
+                        width: 144px;
+                        height: 350px;
+                        
+                        .movie-img{
+                            height: 214px;
+                            width: 144px;
+                        }
 
-                    .read-btn {
+                        mat-card-content {
+                            .title {
+                                max-height: 20px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis; 
+                            }
+                        }
 
-                        img {
-                            margin-left: 0;
+                        .read-btn {
+
+                            img {
+                                margin-left: 0;
+                            }
                         }
                     }
-                }
             }
         }
 
