@@ -4,9 +4,9 @@ const path = require('path');
 const logger = require('morgan');
 const movies = require('./movies.json');
 const cors = require('cors');
-app.use(cors());
 
 const app = express();
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'dist')));
 

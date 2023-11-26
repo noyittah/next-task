@@ -14,7 +14,6 @@ export class MovieDetailsComponent implements OnInit {
   overlay: any;
   hostElement: any;
 
-
   movieDetails: any = {
     image: '',
     title: '',
@@ -22,6 +21,8 @@ export class MovieDetailsComponent implements OnInit {
     rating: 0,
     summary: ''
   };
+
+  private movieDetailsSubscription: any;
 
   constructor(
     private moviesService: MoviesService,
@@ -36,16 +37,22 @@ export class MovieDetailsComponent implements OnInit {
     this.renderer.addClass(this.overlay, 'overlay');
     this.renderer.appendChild(document.body, this.overlay);
 
-      this.moviesService.getMovieDetails(this.data.movieId).subscribe((res) => {
-      this.movieDetails.image = res[0].image;
-      this.movieDetails.rating = res[0].rating;
-      this.movieDetails.time = this.changeRunTimeFormat(res[0].runtime);
-      this.movieDetails.summary = this.sanitizeHTML(res[0].synopsis);
-      this.movieDetails.title = res[0].title;
-    });
+    // Subscribe and store the subscription
+    this.movieDetailsSubscription = this.moviesService.getMovieDetails(this.data.movieId)
+      .subscribe((res) => {
+        this.movieDetails.image = res[0].image;
+        this.movieDetails.rating = res[0].rating;
+        this.movieDetails.time = this.changeRunTimeFormat(res[0].runtime);
+        this.movieDetails.summary = this.sanitizeHTML(res[0].synopsis);
+        this.movieDetails.title = res[0].title;
+      });
   }
 
   ngOnDestroy(): void {
+    if (this.movieDetailsSubscription) {
+      this.movieDetailsSubscription.unsubscribe();
+    }
+
     if (document.body && this.overlay instanceof Node) {
       this.renderer.removeChild(document.body, this.overlay);
     }
