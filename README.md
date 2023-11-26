@@ -1,10 +1,11 @@
 # next-test
 
+
 ## Installation
 1. Download the repository
 2. Install npm modules: `npm install`
 3. Start up the server: `npm start`
 
-## Usage
-1. Get all movies: http://localhost:3000/movies
-2. get one movie by id: http://localhost:3000/movies/:id (e.g., http://localhost:3000/movies/60027713)
+
+https://github.com/noyittah/next-task/assets/74644378/9421a358-037c-441a-aedb-0819dcd5aeee
+
