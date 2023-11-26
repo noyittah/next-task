@@ -1,7 +1,11 @@
 # next-test
 
-https://github.com/noyittah/next-task/assets/74644378/9421a358-037c-441a-aedb-0819dcd5aeee
-https://github.com/noyittah/next-task/assets/74644378/2751f55f-143a-4daa-8431-7682e562ff67
+
+Uploading Screen Recording 2023-11-26 at 14.39.36.mov…
+
+
+
+https://github.com/noyittah/next-task/assets/74644378/e3bade5b-fb90-409c-a5da-7f24eb157b45
 
 
 ## Installation
